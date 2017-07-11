@@ -1,5 +1,6 @@
 require_relative 'withdrawal'
 require_relative 'deposit'
+require_relative 'history'
 
 class Account
 
@@ -7,15 +8,15 @@ class Account
 
   def initialize(starting_balance)
     @starting_balance = starting_balance
-    @history = []
+    @history = History.new
   end
 
   def make_withdrawal(amount)
-    @history << Withdrawal.new(amount)
+    @history.record(Withdrawal.new(amount))
   end
 
   def make_deposit(amount)
-    @history << Deposit.new(amount)
+    @history.transactions << Deposit.new(amount)
   end
 
 end

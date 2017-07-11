@@ -6,4 +6,7 @@ class History
     @transactions = []
   end
 
+  def record(transaction)
+    @transactions << transaction
+  end
 end

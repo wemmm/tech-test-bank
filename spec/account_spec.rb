@@ -9,21 +9,21 @@ describe Account do
     end
 
     it 'instantiates with a history' do
-      expect(account.history).to eq []
+      expect(account.history).to be_a(History)
     end
   end
 
   describe '#make_withdrawal' do
     it 'stores a new Withdrawal object' do
       account.make_withdrawal(200)
-      expect(account.history.length).to eq 1
+      expect(account.history.transactions[0]).to be_a(Withdrawal)
     end
   end
 
   describe '#make_deposit' do
     it 'stores a new Deposit object' do
       account.make_deposit(200)
-      expect(account.history.length).to eq 1
+      expect(account.history.transactions[0]).to be_a(Deposit)
     end
   end
 end
