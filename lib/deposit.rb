@@ -1,4 +1,4 @@
-class Withdrawal
+class Deposit
 
   attr_reader :amount, :date
 
