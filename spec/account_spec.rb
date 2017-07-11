@@ -19,4 +19,11 @@ describe Account do
       expect(account.history.length).to eq 1
     end
   end
+
+  describe '#make_deposit' do
+    it 'stores a new Deposit object' do
+      account.make_deposit(200)
+      expect(account.history.length).to eq 1
+    end
+  end
 end

@@ -13,4 +13,8 @@ class Account
     @history << Withdrawal.new(amount)
   end
 
+  def make_deposit(amount)
+    @history << Deposit.new(amount)
+  end
+
 end
