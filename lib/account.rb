@@ -1,4 +1,5 @@
-require 'withdrawal'
+require_relative 'withdrawal'
+require_relative 'deposit'
 
 class Account
 
